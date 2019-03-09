@@ -8,7 +8,7 @@ use dsweb\dal\Connection;
 class ConnectionUtils
 {
 
-    // mod_php is thread-safe and to be honest I have never saw a multithreaded php application => no thread-locals
+    // mod_php is thread-safe and to be honest I have never seen a multithreaded php application => no thread-locals
     // Since no connection pool is available for php then the idea is to keep one connection open throughout the request
     private static $staticContext = null;
 

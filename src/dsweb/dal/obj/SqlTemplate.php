@@ -23,7 +23,7 @@ class SqlTemplate
     {
         $result = $this->queryRawResultList($sqlStatement);
         if ($result != null && count($result) > 0) {
-            $keyList = key($result[0]);
+            $keyList = array_keys($result[0]);
             if ($keyList != null && count($keyList) > 0) {
                 return $result[0][$keyList[0]];
             }
